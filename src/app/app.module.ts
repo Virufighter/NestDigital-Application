@@ -12,7 +12,10 @@ import { ViewcoursesComponent } from './viewcourses/viewcourses.component';
 import { ViewfriendsComponent } from './viewfriends/viewfriends.component';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
-import { LoginRegistrationComponent } from './login-registration/login-registration.component'
+import { LoginRegistrationComponent } from './login-registration/login-registration.component';
+import { AddnavbarComponent } from './addnavbar/addnavbar.component';
+import { AddcourseComponent } from './addcourse/addcourse.component';
+import { AddfriendComponent } from './addfriend/addfriend.component'
 
 const myrout:Routes=[
   {
@@ -42,6 +45,18 @@ const myrout:Routes=[
   {
     path:"reg",
     component:LoginRegistrationComponent
+  },
+  {
+    path:"addnav",
+    component:AddnavbarComponent
+  },
+  {
+    path:"addcourse",
+    component:AddcourseComponent
+  },
+  {
+    path:"addfriend",
+    component:AddfriendComponent
   }
 
 ]
@@ -55,7 +70,10 @@ const myrout:Routes=[
     ViewcoursesComponent,
     ViewfriendsComponent,
     LoginComponent,
-    LoginRegistrationComponent
+    LoginRegistrationComponent,
+    AddnavbarComponent,
+    AddcourseComponent,
+    AddfriendComponent
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@ export class LoginComponent {
   constructor(private r:Router){}
   login=()=>{
     if (this.user=="1122" && this.password=="12345") {
-      this.r.navigate(['/'])
+      this.r.navigate(['/addnav'])
 
 
       
