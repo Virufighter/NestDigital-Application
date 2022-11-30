@@ -15,12 +15,15 @@ import { LoginComponent } from './login/login.component';
 import { LoginRegistrationComponent } from './login-registration/login-registration.component';
 import { AddnavbarComponent } from './addnavbar/addnavbar.component';
 import { AddcourseComponent } from './addcourse/addcourse.component';
-import { AddfriendComponent } from './addfriend/addfriend.component'
+import { AddfriendComponent } from './addfriend/addfriend.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { IndexComponent } from './index/index.component'
 
 const myrout:Routes=[
   {
     path:"",
-    component:HomePageComponent
+    component:IndexComponent
     
   },{
     path:"admin",
@@ -57,7 +60,16 @@ const myrout:Routes=[
   {
     path:"addfriend",
     component:AddfriendComponent
-  }
+  },
+  {
+    path:"gallery",
+    component:GalleryComponent
+
+  },
+  {
+    path:"contact",
+    component:ContactsComponent
+  },
 
 ]
 
@@ -73,7 +85,10 @@ const myrout:Routes=[
     LoginRegistrationComponent,
     AddnavbarComponent,
     AddcourseComponent,
-    AddfriendComponent
+    AddfriendComponent,
+    GalleryComponent,
+    ContactsComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,

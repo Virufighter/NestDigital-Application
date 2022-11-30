@@ -16,7 +16,7 @@ export class AdminLoginComponent {
 
       
     } else {
-      console.log("Invalid creditials")
+      alert("Invalid creditials")
       
     }
 
