@@ -10,6 +10,7 @@ export class ViewcoursesComponent {
   constructor(private api:ApiService){
     api.fetchCourse().subscribe(
       (response)=>{
+        this.loading=false
         this.data=response
       }
     )
@@ -17,5 +18,6 @@ export class ViewcoursesComponent {
 
 
   data:any={}
+  loading:boolean=true
 
 }

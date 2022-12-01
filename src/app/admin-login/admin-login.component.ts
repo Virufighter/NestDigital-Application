@@ -12,7 +12,7 @@ export class AdminLoginComponent {
   constructor(private r:Router){}
   login=()=>{
     if (this.admin=="admin" && this.password=="nestdigital") {
-      this.r.navigate(['/viewnav'])
+      this.r.navigate(['/viewcourse'])
 
       
     } else {

@@ -14,15 +14,46 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let i of data">
+      <ng-container *ngIf="loading; then loadingScreen; else dataScreen"></ng-container>
+      <ng-template #loadingScreen>
+        <div class="spinner-grow text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-secondary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-danger" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-warning" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-info" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-light" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-dark" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+
+      </ng-template>
+      <ng-template #dataScreen>
+        <tr *ngFor="let i of data">
        
-        <td>{{i._id}}</td>
-        <td>{{i.courseTitle}}</td>
-        <td>{{i.courseDescription}}</td>
-        <td>{{i.courseDuration}}</td>
-        <td>{{i.courseDate}}</td>
-        <td>{{i.courseVenue}}</td>
-      </tr>
+          <td>{{i._id}}</td>
+          <td>{{i.courseTitle}}</td>
+          <td>{{i.courseDescription}}</td>
+          <td>{{i.courseDuration}}</td>
+          <td>{{i.courseDate}}</td>
+          <td>{{i.courseVenue}}</td>
+        </tr>
+      </ng-template>
+     
       
     </tbody>
   </table>
